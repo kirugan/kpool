@@ -1,5 +1,8 @@
 # kpool
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/kirugan/kpool.svg)](https://pkg.go.dev/github.com/kirugan/kpool)
+[![Go Report Card](https://goreportcard.com/badge/github.com/kirugan/kpool)](https://goreportcard.com/report/github.com/kirugan/kpool)
+
 A generic, keyed worker pool for Go.
 
 > No, not KPop 🎤💃. **KPool** 🪣⚙️. Sorry.
@@ -25,6 +28,8 @@ The obvious solution is a `map[userID]*sync.Mutex` — but now you have to worry
 Trade-off: multiple users share a worker, so a slow user can delay other users that happen to hash to the same slot. Size `workers` accordingly.
 
 ## Install
+
+Requires Go 1.26 or later.
 
 ```bash
 go get github.com/kirugan/kpool
@@ -59,3 +64,7 @@ make lint    # run golangci-lint
 make format  # auto-fix formatting
 make test    # go test ./...
 ```
+
+## License
+
+MIT — see [LICENSE](LICENSE).
